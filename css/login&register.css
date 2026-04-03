@@ -1,0 +1,110 @@
+.content {
+    justify-items: center;
+}
+
+.logging {
+    width: 75%;
+    background-color: #143226;
+    border: 0.104vw solid black;
+    border-radius: 0.26vw;
+    justify-items: center;
+    justify-content: center;
+}
+
+.logging img {
+    margin-top: 3vh;
+}
+
+label {
+    color: #dfddc9;
+}
+
+input[type=text], input[type=password], input[type=number], input[type=email] {
+    border-radius: 0.26vw;
+}
+
+#username {
+    margin-left: 4.288vw;
+}
+
+#name {
+    margin-left: 7.141vw;
+}
+
+#surname {
+    margin-left: 5.088vw;
+}
+
+#email {
+    margin-left: 6.771vw;
+}
+
+#password {
+    margin-left: 4.488vw;
+}
+
+.logging button {
+    background-color: #dfddc9;
+    color: #143226;
+    border-color: white;
+    padding: 0.26vw;
+    width: 7.156vw;
+    height: 2.604vw;
+    font-size: 1.01vw;
+    font-style:italic;
+    font-weight: bold;
+    margin-top: 2vh;
+    margin-left: 7.5vw;
+}
+
+.logging button:hover {
+    background-color: black;
+    color: white;
+}
+
+#login-form i {
+    color: #dfddc9;
+    font-size: 1.01vw;
+    margin-top: 1vh;
+    margin-left: 4.5vw;
+}
+
+.registering {
+    width: 75%;
+    background-color: #143226;
+    border: 0.104vw solid black;
+    border-radius: 0.26vw;
+    justify-items: center;
+    justify-content: center;
+}
+
+.registering img {
+    margin-top: 3vh;
+}
+
+.registering button {
+    background-color: #dfddc9;
+    color: #143226;
+    border-color: white;
+    padding: 0.26vw;
+    width: 7.156vw;
+    height: 2.604vw;
+    font-size: 1.01vw;
+    font-style:italic;
+    font-weight: bold;
+    margin-top: 3vh;
+    margin-left: 7.5vw;
+}
+
+.registering button:hover {
+    background-color: black;
+    color: white;
+}
+/**
+Reference List:
+
+w3schools. 2024.ASP.NET Razor - C# and VB Code Syntax, 2024.
+[Online].Available at:
+https://www.w3schools.com/asp/razor_syntax.asp
+[Accessed 18 October 2024].
+*/

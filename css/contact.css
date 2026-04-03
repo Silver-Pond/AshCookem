@@ -1,0 +1,86 @@
+.content {
+    justify-items: center;
+}
+
+h2 {
+    background-image: linear-gradient(#143226, #dfddc9, black);
+    color: transparent;
+    background-clip: text;
+}
+
+label {
+    color: #dfddc9;
+}
+
+input[type=text], input[type=password], input[type=number], input[type=email] {
+    border-radius: 0.26vw;
+}
+
+#name02 {
+    margin-left: 7.141vw;
+}
+
+#surname02 {
+    margin-left: 5.088vw;
+}
+
+#email02 {
+    margin-left: 6.771vw;
+}
+
+#number02 {
+    margin-left: 5.688vw;
+}
+
+textarea {
+    width: 98%;
+    height: 25vh;
+    border-radius: 0.521vw;
+}
+
+#contact-form i {
+    color: #dfddc9;
+    font-size: 1.01vw;
+    margin-top: 1vh;
+    margin-left: 4.5vw;
+}
+
+.contact {
+    width: 75%;
+    background-color: #143226;
+    border: 0.104vw solid black;
+    border-radius: 0.26vw;
+    justify-items: center;
+    justify-content: center;
+}
+
+.contact img {
+    margin-top: 3vh;
+}
+
+.contact button {
+    background-color: #dfddc9;
+    color: #143226;
+    border-radius: 0.26vw;
+    padding: 0.26vw;
+    width: 7.156vw;
+    height: 2.604vw;
+    font-size: 1.01vw;
+    font-style:italic;
+    font-weight: bold;
+    margin-top: 3vh;
+    margin-left: 7.5vw;
+}
+
+.contact button:hover {
+    background-color: black;
+    color: white;
+}
+/**
+Reference List:
+
+w3schools. 2024.ASP.NET Razor - C# and VB Code Syntax, 2024.
+[Online].Available at:
+https://www.w3schools.com/asp/razor_syntax.asp
+[Accessed 18 October 2024].
+*/

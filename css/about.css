@@ -1,0 +1,63 @@
+.main-header img {
+    border-top-right-radius: 0.26vw;
+    border-top-left-radius: 0.26vw;
+}
+
+.main-content {
+    width: 98.5%;
+    justify-items: center;
+}
+
+.table-a {
+    width: 80%;
+    margin-top: 6.25vw;
+}
+
+.table-a td {
+    width: 50%;
+    text-align: left;
+    font-size: 1.563vw;
+    letter-spacing: 0.078vw;
+}
+
+.table-a span {
+    font-size: 1.563vw;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.table-a img {
+    border-radius: 0.26vw;
+}
+
+.table-b {
+    width: 80%;
+    margin-top: 6.25vw;
+}
+
+.table-b td {
+    width: 50%;
+    text-align: left;
+    font-size: 1.563vw;
+    letter-spacing: 0.078vw;
+}
+
+.table-b img {
+    border-radius: 0.26vw;
+}
+
+.table-c {
+    width: 80%;
+    margin-top: 6.25vw;
+}
+
+.table-c td {
+    width: 50%;
+    text-align: left;
+    font-size: 1.563vw;
+    letter-spacing: 0.078vw;
+}
+
+.table-c img {
+    border-radius: 0.26vw;
+}

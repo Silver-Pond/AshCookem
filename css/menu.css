@@ -1,0 +1,38 @@
+.main-menu img {
+    border-top-right-radius: 0.26vw;
+    border-top-left-radius: 0.26vw;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-bottom: 1.042vw;
+    justify-self: center;
+    border-bottom: #143226 0.26vw solid;
+}
+
+td {
+    padding: 0.521vw;
+    vertical-align: top;
+    font-size: 1.302vw;
+}
+
+td:last-child {
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+th {
+    font-style: italic;
+    font-size: 2.083vw;
+    font-weight: bold;
+    color: color-mix(in srgb, #143226 70%, black 30%);
+}
+
+small {
+    color: #555;
+}
+/*
+https://www.dalrichtownesquare.com/2023/09/14/richardson-imperial-east-african-cuisine-richardson-dal-rich-towne-square/
+
+*/

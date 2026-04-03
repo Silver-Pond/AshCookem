@@ -1,0 +1,334 @@
+body{
+    background-color: black;
+    overflow: auto;
+}
+
+.main{
+    background-color: #143226;
+}
+
+.nav{
+    background-color: #143226;
+}
+
+.nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.nav ul li {
+    float: left;
+}
+
+.nav-link {
+    display: inline-block;
+    color: white;
+    font-size: 1.302vw;
+    text-align: center;
+    padding: 2.083vw 0.781vw 2.083vw 0.781vw;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background-color: black;
+}
+
+.nav-link.active {
+    background-color: black;
+    color: #143226;
+}
+
+.nav-btn {
+    background-color: #dfddc9;
+    color: #143226;
+    font-size: 0.781vw;
+    font-style: italic;
+    font-weight: bold;
+    padding: 1.042vw;
+    margin-top: 1.042vw;
+    margin-left: 38.021vw;
+    border-radius: 0.26vw;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.nav img {
+    padding: 0.26vw 2.083vw 0.26vw 2.083vw;
+}
+
+.content {
+    background-color: #dfddc9;
+    border-radius: 0.26vw;
+    width: 98%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content h1 {
+    color: black;
+    font-style: italic;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content p {
+    color: #143226;
+    font-size: 1.302vw;
+    font-style: italic;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.our-story {
+    width: 96%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.our-story a {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.26vw;
+}
+
+.items-list {
+    width: 98%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+}
+
+.items-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.items-list ul li {
+    float: left;
+}
+
+.items-link {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5vh 0.521vw 0.5vh 0.521vw;
+}
+
+.items-link img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.26vw;
+    background-color: black;
+}
+
+.reservation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.reservation-content {
+    background: #dfddc9;
+    padding: 1.302vw;
+    border-radius: 0.521vw;
+    width: 40%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.reservation-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+}
+
+.reservation-image img {
+    border-radius: 0.521vw;
+}
+
+.reservation-content form {
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Close button */
+.close-btn {
+    color: white;
+    position: absolute;
+    padding: 0.521vw;
+    border-radius: 0.521vw;
+    top: 1vh;
+    right: 1.281vw;
+    font-size: 2.302vw;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: black;
+}
+
+/* Form layout */
+.reservation-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-content label {
+    margin-top: 1vh;
+    margin-left: 0.521vw;
+    font-size: 1.302vw;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.reservation-content input,
+.reservation-content select,
+.reservation-content button {
+    margin-top: 0.5vh;
+    padding: 0.521vw;
+    border-radius: 0.521vw;
+    font-size: 0.781vw;
+}
+
+/* Button styling */
+.reservation-content button {
+    background-color: #143226;
+    color: white;
+    border-color: black;
+    border-radius: 0.521vw;
+    padding: 0.26vw;
+    width: 7.156vw;
+    height: 2.604vw;
+    font-size: 1.01vw;
+    font-style:italic;
+    font-weight: bold;
+    margin-top: 1.5vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+    cursor: pointer;
+}
+
+.reservation-content button:hover {
+    background-color: black;
+    color: #dfddc9;
+}
+
+.footer {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #143226;
+}
+
+.footer footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* aligns top instead of center */
+    padding: 1.042vw;
+}
+
+/* Left side (logo + text) */
+.footer .image {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .image p {
+    color: white;
+}
+
+.footer .image img {
+    margin-left: 3.242vw;
+    width: 7.813vw;
+    height: auto;
+}
+
+/* Right side container */
+.footer .links-right {
+    display: flex;
+    gap: 2.604vw; /* space between the three UL columns */
+}
+
+/* Reset UL styling */
+.footer .links-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Space between links */
+.footer .links-right li {
+    margin-bottom: 0.521vw;
+}
+
+.footer .links-right li:hover {
+    color: black;
+}
+
+/* Social icons row */
+.footer .links-right ul:last-child {
+    display: block;
+    gap: 0.625vw;
+}
+
+/* Optional: remove vertical spacing for icons */
+.footer .links-right ul:last-child li {
+    margin-bottom: 0;
+}
+
+.links-pages {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-decoration: none;
+    padding: 0.5vh 0.521vw 0.5vh 0.521vw;
+}
+
+.links-pages a {
+    text-decoration: none;
+    color: #dfddc9;
+}
+
+.social-links {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-decoration: none;
+    padding: 0.5vh 0.521vw 0.5vh 0.521vw;
+    border-radius: 0.5vh;
+}

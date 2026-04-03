@@ -1,0 +1,69 @@
+.location-header img {
+    border-top-right-radius: 0.26vw;
+    border-top-left-radius: 0.26vw;
+}
+
+.location-table table {
+    width: 60%;
+    background-color: #143226;
+    border: 0.26vw solid #143226;
+    border-bottom-left-radius: 0.521vw;
+    border-bottom-right-radius: 0.521vw;
+    margin-bottom: 1.042vw;
+    justify-self: center;
+}
+
+.location-table thead {
+    background-color: #143226;
+    color: white;
+    padding: 1.042vw;
+    font-style: italic;
+    font-size: 1.302vw;
+}
+
+.location-table tbody {
+    padding: 0.521vw;
+    vertical-align: top;
+    font-size: 1.302vw;
+}
+
+.location-table td {
+    background-color: #dfddc9;
+    border: 0.104vw solid #143226;
+    border-bottom-left-radius: 0.521vw;
+    border-bottom-right-radius: 0.521vw;
+    padding: 0.521vw;
+    text-align: center;
+}
+
+.time-table table {
+    width: 60%;
+    background-color: #143226;
+    border: 0.26vw solid #143226;
+    border-radius: 0.521vw;
+    margin-bottom: 1.042vw;
+    justify-self: center;
+}
+
+.time-table thead {
+    background-color: #143226;
+    color: white;
+    padding: 1.042vw;
+    font-style: italic;
+    font-size: 1.302vw;
+}
+
+.time-table tbody {
+    background-color: #dfddc9;
+    padding: 0.521vw;
+    vertical-align: top;
+    font-size: 1.302vw;
+}
+
+.time-table td {
+    border: 0.104vw solid #143226;
+    border-bottom-left-radius: 0.521vw;
+    border-bottom-right-radius: 0.521vw;
+    padding: 0.521vw;
+    text-align: center;
+}

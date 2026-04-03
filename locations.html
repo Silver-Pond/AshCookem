@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A&K-Restaurant Locations</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/locations.css">
+</head>
+<body>
+<div class="main">
+    <div class="nav">
+        <ul>
+            <li><img src="img/ash-n-ellys02.png" style="width: 7.813vw; !important; height: auto" alt="Ash & Elly's Logo"/></li>
+            <li><a class="nav-link" href="index.html">HOME</a></li>
+            <li><a class="nav-link" href="menu.html">MENU</a></li>
+            <li><a class="nav-link" href="about.html">OUR STORY</a></li>
+            <li><a class="nav-link" href="locations.html">LOCATIONS</a></li>
+            <li><a class="nav-link" href="contact.html">CONTACT</a></li>
+            <li><button class="nav-btn" onclick="reservation()">MAKE A RESERVATION</button></li>
+        </ul>
+    </div>
+
+    <div class="reservation" id="reservationOverlay">
+        <div class="reservation-content">
+            <span class="close-btn" onclick="closeReservation()">&times;</span>
+
+            <div class="reservation-image">
+                <img src="img/RESERVATION.png" width="100%" height=auto alt="Ash & Elly's Logo"/>
+            </div>
+            <br />
+            <br />
+
+            <form id="reservation-form" method="post">
+
+                <label for="name"><b>NAME:</b></label>
+                <input type="text" id="name" name="name" placeholder="Enter Name" required>
+                <br />
+
+                <label for="surname"><b>SURNAME:</b></label>
+                <input type="text" id="surname" name="surname" placeholder="Enter Surname" required>
+                <br />
+
+                <label for="email"><b>EMAIL:</b></label>
+                <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                <br />
+
+                <label for="number"><b>NUMBER:</b></label>
+                <input type="tel" id="number" name="number" placeholder="e.g. 082 996 5790" required value="0" maxlength="10">
+                <br />
+
+                <label for="party-size"><b>PARTY SIZE:</b></label>
+                <input type="number" id="party-size" name="party_size" placeholder="Enter Size" required min="1" max="6">
+                <br />
+
+                <label for="location"><b>LOCATION:</b></label>
+                <select id="location" name="location" required>
+                    <option value="">Select Time</option>
+                    <option value="location"></option>
+                </select>
+                <br />
+
+                <label for="reserve-day"><b>DATE:</b></label>
+                <input type="date" id="reserve-day" name="reserve_day" required>
+                <br />
+
+                <label for="reserve-time"><b>TIME:</b></label>
+                <select id="reserve-time" name="reserve_time" required>
+                    <option value="">Select Time</option>
+                    <option value="6am">6am</option>
+                    <option value="7am">7am</option>
+                    <option value="8am">8am</option>
+                    <option value="9am">9am</option>
+                    <option value="10am">10am</option>
+                    <option value="11am">11am</option>
+                    <option value="12pm">12pm</option>
+                    <option value="1pm">1pm</option>
+                    <option value="2pm">2pm</option>
+                    <option value="3pm">3pm</option>
+                    <option value="4pm">4pm</option>
+                    <option value="5pm">5pm</option>
+                    <option value="6pm">6pm</option>
+                </select>
+                <br />
+
+                <button type="submit">Book</button>
+                <br />
+            </form>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="location-header">
+            <img src="img/LOCATIONS.png" width="100%" height=auto alt="Ash & Elly's Logo">
+        </div>
+
+        <div class="location-table">
+            <table>
+                <thead>
+                <tr id="location-head"></tr>
+                </thead>
+                <tbody id="location-body"></tbody>
+            </table>
+        </div>
+        <br />
+        <br />
+
+        <div class="time-table">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Tuesday</td>
+                        <td>Wednesday</td>
+                        <td>Thursday</td>
+                        <td>Friday</td>
+                        <td>Saturday</td>
+                        <td>Sunday</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>6am - 6pm</td>
+                        <td>6am - 6pm</td>
+                        <td>6am - 6pm</td>
+                        <td>6am - 6pm</td>
+                        <td>6am - 6pm</td>
+                        <td>6am - 6pm</td>
+                        <td>6am - 6pm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div class="footer">
+        <footer>
+            <div class="image">
+                <img src="img/ash-n-ellys02.png" alt="Ash & Elly's Logo"/>
+                <p>@2026 All Rights Reserved | Legals</p>
+            </div>
+
+            <div class="links-right">
+                <ul>
+                    <li class="links-pages"><a href="index.html">HOME</a></li>
+                    <li class="links-pages"><a href="menu.html">MENU</a></li>
+                    <li class="links-pages"><a href="about.html">OUR STORY</a></li>
+                </ul>
+
+                <ul>
+                    <li class="links-pages"><a href="locations.html">LOCATIONS</a></li>
+                    <li class="links-pages"><a href="contact.html">CONTACT</a></li>
+                    <li class="links-pages"><a href="privacy.html">PRIVACY</a></li>
+                </ul>
+
+                <ul>
+                    <li class="social-links"><img src="img/facebook.png" style="width: 1.563vw; height: 1.563vw;" alt="Facebook"/></li>
+                    <li class="social-links"><img src="img/insta.png" style="width: 1.563vw; height: 1.563vw;" alt="Instagram"/></li>
+                    <li class="social-links"><img src="img/twitter.png" style="width: 1.563vw; height: 1.563vw;" alt="Twitter"/></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</div>
+<script type="module" src="javascript/location.js"></script>
+<script type="module" src="javascript/reservation_booking.js"></script>
+</body>
+<script src="javascript/reservation.js"></script>
+</html>
