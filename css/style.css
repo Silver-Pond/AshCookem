@@ -248,6 +248,12 @@ body{
     color: #dfddc9;
 }
 
+.resizable-break {
+    width: 100%;
+    height: 1.042vw;
+    overflow: hidden;
+}
+
 .footer {
     width: 100%;
     margin-left: auto;
@@ -258,7 +264,7 @@ body{
 .footer footer {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* aligns top instead of center */
+    align-items: flex-start;
     padding: 1.042vw;
 }
 
