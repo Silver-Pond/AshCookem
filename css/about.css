@@ -61,6 +61,31 @@
 .table-c img {
     border-radius: 0.26vw;
 }
+
+.table-a img,
+.table-b img,
+.table-c img {
+    border-radius: 0.26vw;
+
+    --rotateX: 0deg;
+    --rotateY: 0deg;
+
+    transform-style: preserve-3d;
+    transform:
+            perspective(1000px)
+            rotateX(var(--rotateX))
+            rotateY(var(--rotateY));
+
+    transition: box-shadow 0.3s ease;
+    will-change: transform;
+    cursor: pointer;
+}
+
+.table-a img:hover,
+.table-b img:hover,
+.table-c img:hover {
+    box-shadow: 0 0.781vw 1.563vw rgba(0,0,0,1);
+}
 /*
     REFERENCE LIST
 

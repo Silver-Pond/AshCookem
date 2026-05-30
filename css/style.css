@@ -77,9 +77,25 @@ body{
     margin-right: auto;
 }
 
+#story {
+    width: 100%;
+    height: auto;
+}
+
+#menu-img {
+    width: 31.25vw;
+    height: auto;
+}
+
+#reserve-img {
+    width: 31.25vw;
+    height: 19.271vw;
+}
+
 .content h1 {
     color: black;
     font-style: italic;
+    font-size: 3.302vw;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -95,7 +111,7 @@ body{
 }
 
 .our-story {
-    width: 96%;
+    width: 67.3%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -246,6 +262,36 @@ body{
 .reservation-content button:hover {
     background-color: black;
     color: #dfddc9;
+}
+
+/* 3D hover effect */
+.our-story,
+.items-link {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+    --rotateX: 0deg;
+    --rotateY: 0deg;
+
+    transform:
+            rotateX(var(--rotateX))
+            rotateY(var(--rotateY));
+
+    transition: box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.our-story:hover,
+.items-link:hover {
+    box-shadow: 0 1.042vw 2.083vw rgba(0,0,0,1);
+}
+
+/* Ensure images follow parent transform smoothly */
+.our-story img,
+.items-link img {
+    display: block;
+    border-radius: 0.521vw;
+    pointer-events: none;
 }
 
 .resizable-break {
