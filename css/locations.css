@@ -3,6 +3,12 @@
     border-top-left-radius: 0.26vw;
 }
 
+.location-header img {
+    border-top-right-radius: 0.26vw;
+    border-top-left-radius: 0.26vw;
+    transition: opacity 0.8s ease-in-out;
+}
+
 .location-table table {
     width: 60%;
     background-color: #143226;
