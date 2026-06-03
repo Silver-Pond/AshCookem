@@ -1,3 +1,4 @@
+// Declaring variables
 const angle = 15;
 
 const lerp = (start, end, amount) => {
@@ -105,3 +106,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     update();
 });
+/*
+* REFERENCE LIST
+*
+* */

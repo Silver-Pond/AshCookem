@@ -99,7 +99,11 @@
             <h2>CONTACT</h2>
             <div class="resizable-break"></div>
 
-            <form id="contact-form" method="post">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+                <input type="hidden" name="access_key" value="af777032-5845-4bc1-b794-855e50e77c93">
+                <input type="hidden" name="subject" value="New Contact Form Submission">
+                <input type="hidden" name="form_name" value="Ash n Elly's Contact Form">
 
                 <label for="name"><b>NAME:</b></label>
                 <input type="text" id="name02" placeholder="Enter Name" name="name" required>
