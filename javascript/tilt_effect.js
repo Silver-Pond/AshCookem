@@ -109,4 +109,43 @@ window.addEventListener("DOMContentLoaded", () => {
 /*
 * REFERENCE LIST
 *
+* MDN Web Docs, 2025. Element: mousemove event.
+* Available at: https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event
+* [Accessed: 4 June 2026].
+*
+* MDN Web Docs, 2025. Element: mouseleave event.
+* Available at: https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseleave_event
+* [Accessed: 4 June 2026].
+*
+* MDN Web Docs, 2025. Window: requestAnimationFrame() method.
+* Available at: https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+* [Accessed: 4 June 2026].
+*
+* MDN Web Docs, 2025. Element.getBoundingClientRect().
+* Available at: https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
+* [Accessed: 4 June 2026].
+*
+* MDN Web Docs, 2025. Using CSS transforms.
+* Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms
+* [Accessed: 4 June 2026].
+*
+* MDN Web Docs, 2025. transform-style.
+* Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style
+* [Accessed: 4 June 2026].
+*
+* MDN Web Docs, 2025. perspective.
+* Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/perspective
+* [Accessed: 4 June 2026].
+*
+* Mozilla Foundation, 2025. Document Object Model (DOM).
+* Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+* [Accessed: 4 June 2026].
+*
+* W3Schools, 2025. JavaScript HTML DOM EventListener.
+* Available at: https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+* [Accessed: 4 June 2026].
+*
+* W3Schools, 2025. CSS 3D Transforms.
+* Available at: https://www.w3schools.com/css/css3_3dtransforms.asp
+* [Accessed: 4 June 2026].
 * */
