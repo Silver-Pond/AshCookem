@@ -6,11 +6,9 @@ const lerp = (start, end, amount) => {
 };
 
 /*
- * Remaps cursor position values to a limited range
- * between -angle and +angle.
- *
- * This ensures that image rotation remains controlled
- * regardless of screen size or image dimensions.
+ * Remaps cursor position values to a limited range between -angle and +angle.
+ * This ensures that image rotation remains controlled regardless of screen size
+ * or image dimensions.
  */
 const remap = (value, oldMax, newMax) => {
 
@@ -25,13 +23,7 @@ const remap = (value, oldMax, newMax) => {
 // Wait until the HTML document is fully loaded before executing any JavaScript (Mozilla Foundation, 2025).
 window.addEventListener("DOMContentLoaded", () => {
 
-    /*
-     * Select all elements that should receive the
-     * 3D hover animation.
-     *
-     * querySelectorAll() is part of the Document
-     * Object Model (DOM) API (Mozilla Foundation, 2025).
-     */
+    // Select all elements that should receive the (DOM) API (Mozilla Foundation, 2025).
     const tiltElements = document.querySelectorAll(
         ".our-story, " +
         ".items-link, " +
@@ -47,29 +39,17 @@ window.addEventListener("DOMContentLoaded", () => {
         element.dataset.rotateX = 0;
         element.dataset.rotateY = 0;
 
-        /*
-         * Track mouse movement across the element.
-         *
-         * The mousemove event continuously updates
-         * the cursor position while the pointer is
-         * within the element boundary
-         * (MDN Web Docs, 2025).
-         */
+        // Track mouse movement across the element (MDN Web Docs, 2025).
         element.addEventListener("mousemove", (event) => {
 
-            /*
-             * Retrieve the element's size and position
-             * relative to the viewport using
-             * getBoundingClientRect()
-             * (MDN Web Docs, 2025).
-             */
+            // Retrieve the element's size and position relative to the viewport (MDN Web Docs, 2025).
             const rect = element.getBoundingClientRect();
 
-            // Calculate the centre point of the element.
+            // Calculate the center point of the element.
             const centerX = rect.left + rect.width / 2;
             const centerY = rect.top + rect.height / 2;
 
-            // Determine cursor position relative to centre.
+            // Determine cursor position relative to center.
             const posX = event.clientX - centerX;
             const posY = event.clientY - centerY;
 
@@ -104,8 +84,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
     /*
-     * Animation Loop
-     *
+     * Animation Loop:
      * Continuously updates CSS custom properties
      * to create smooth movement.
      */
@@ -113,12 +92,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         tiltElements.forEach((element) => {
 
-            /*
-             * Retrieve the current CSS rotation values.
-             * getComputedStyle() allows JavaScript
-             * to read CSS custom properties
-             * (MDN Web Docs, 2025).
-             */
+            // Retrieve the current CSS rotation values (MDN Web Docs, 2025).
             let currentX =
                 parseFloat(
                     getComputedStyle(element)
@@ -131,10 +105,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         .getPropertyValue("--rotateY")
                 ) || 0;
 
-            /*
-             * Use linear interpolation to gradually
-             * move towards the target rotation.
-             */
+            // Use linear interpolation to gradually move towards the target rotation.
             const nextX = lerp(
                 currentX,
                 parseFloat(element.dataset.rotateX),
@@ -147,12 +118,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 0.08
             );
 
-            /*
-             * Update CSS variables which are used
-             * by CSS transform properties to create
-             * the 3D rotation effect
-             * (MDN Web Docs, 2025).
-             */
+            // Update CSS variables (MDN Web Docs, 2025).
             element.style.setProperty(
                 "--rotateX",
                 `${nextX}deg`
@@ -166,8 +132,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         /*
          * requestAnimationFrame() provides efficient,
-         * browser-optimised animation rendering
-         * (MDN Web Docs, 2025).
+         * browser-optimised animation rendering (MDN Web Docs, 2025).
          */
         requestAnimationFrame(update);
     };
