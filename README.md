@@ -1,4 +1,4 @@
-USER MANUAL
+USER ROLE
 
 👤 User Type: Customer
    Functionality:
