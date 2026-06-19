@@ -140,6 +140,7 @@ input[type=text], input[type=password], input[type=number], input[type=email] {
     font-style:italic;
     font-weight: bold;
     margin-top: 3vh;
+    cursor: pointer;
     align-self: center;
 }
 
@@ -171,6 +172,54 @@ input[type=text], input[type=password], input[type=number], input[type=email] {
 }
 
 .review-stars {
+    color: gold;
+    font-size: 2.104vw;
+}
+
+.external-ratings {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    justify-items: center;
+    background-color: #143226;
+    border: 0.104vw solid black;
+    border-radius: 0.521vw;
+}
+
+.external-ratings h3 {
+    color: #dfddc9;
+    font-size: 1.41vw;
+}
+
+.external-ratings p {
+    color: #dfddc9;
+    font-size: 1.21vw;
+}
+
+.external-ratings a {
+    color: white;
+    font-size: 1.01vw;
+}
+
+.rating-card {
+    background-color: black;
+    color: white;
+    width: 95%;
+    font-size: 1.62vw;
+    border: 0.052vw solid #ddd;
+    border-radius: 0.521vw;
+    padding: 0.781vw;
+    margin: 0.521vw 0;
+    text-align: left;
+}
+
+.rating-card p {
+    color: white;
+    font-size: 1.42vw;
+    text-align: left;
+}
+
+.rating-stars {
     color: gold;
     font-size: 2.104vw;
 }

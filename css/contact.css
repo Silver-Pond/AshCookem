@@ -74,6 +74,7 @@ textarea {
     font-weight: bold;
     margin-top: 3vh;
     margin-left: 8.8vw;
+    cursor: pointer;
 }
 
 .contact button:hover {

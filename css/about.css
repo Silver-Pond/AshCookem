@@ -183,25 +183,27 @@
 }
 
 .table-team td {
-    width: 40%;
     text-align: center;
     vertical-align: top;
     padding: 1rem;
-    font-size: 1.563vw;
+    font-size: 1.11vw;
     letter-spacing: 0.078vw;
 }
 
 .table-team span {
-    font-size: 1.563vw;
+    font-size: 1.11vw;
     font-weight: bold;
     font-style: italic;
 }
 
 .table-team img {
-    width: 100%;
-    max-width: 250px;
+    width: 90%;
     height: auto;
     border-radius: 0.26vw;
+}
+
+.table-team img:hover {
+    box-shadow: 0 1.042vw 2.083vw rgba(0,0,0,1);
 }
 
 .table-a img,

@@ -5,15 +5,15 @@ const supabase = createClient(
     "sb_publishable_y2XUksG29JZt9192S7WPWg_ON1H73lY"
 );
 
-console.log("🔥 reviews.js loaded");
+console.log("reviews.js loaded");
 
 document.addEventListener("DOMContentLoaded", async () => {
-    console.log("✅ DOM ready");
+    console.log("DOM ready");
 
     const form = document.getElementById("review-form");
 
     if (!form) {
-        console.error("❌ review-form not found in DOM");
+        console.error("review-form not found in DOM");
         return;
     }
 
@@ -21,24 +21,25 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     await loadLocations();
     await loadReviews();
+    await loadGoogleRating();
 });
 
 
-// 📍 Load locations
+// Load locations
 async function loadLocations() {
     const { data, error } = await supabase
         .from("location")
         .select("*");
 
     if (error) {
-        console.error("❌ Error loading locations:", error);
+        console.error("Error loading locations:", error);
         return;
     }
 
     const dropdown = document.getElementById("review-location");
 
     if (!dropdown) {
-        console.error("❌ review-location dropdown not found");
+        console.error("review-location dropdown not found");
         return;
     }
 
@@ -53,11 +54,11 @@ async function loadLocations() {
 }
 
 
-// ✍️ Submit review (FIXED: matches YOUR table)
+// Submit review (matches YOUR table)
 async function submitReview(e) {
     e.preventDefault();
 
-    console.log("📤 Submit clicked");
+    console.log("Submit clicked");
 
     const location = document.getElementById("review-location")?.value;
     const rating = document.getElementById("rating")?.value;
@@ -66,7 +67,7 @@ async function submitReview(e) {
 
     console.log({ location, rating, text, name });
 
-    // validation (stronger)
+    // validation
     if (!location) {
         alert("Please select a location.");
         return;
@@ -89,7 +90,7 @@ async function submitReview(e) {
         ]);
 
     if (error) {
-        console.log("🔥 FULL SUPABASE ERROR:");
+        console.log("FULL SUPABASE ERROR:");
         console.dir(error);
         alert(error.message);
         return;
@@ -97,15 +98,16 @@ async function submitReview(e) {
 
     document.getElementById("review-form").reset();
     loadReviews(location);
+    loadGoogleRating(location);
 }
 
 
-// 📥 Load reviews
+// Load reviews
 async function loadReviews(locationFilter = null) {
     const container = document.getElementById("reviewsList");
 
     if (!container) {
-        console.error("❌ reviewsList not found");
+        console.error("reviewsList not found");
         return;
     }
 
@@ -123,7 +125,7 @@ async function loadReviews(locationFilter = null) {
     const { data, error } = await query;
 
     if (error) {
-        console.error("❌ Load error:", error);
+        console.error("Load error:", error);
         return;
     }
 
@@ -149,10 +151,62 @@ async function loadReviews(locationFilter = null) {
     });
 }
 
-
-// 🔄 Filter reviews when location changes
+// Filter reviews when location changes
 document.addEventListener("change", (e) => {
     if (e.target.id === "review-location") {
         loadReviews(e.target.value);
+        loadGoogleRating(e.target.value);
     }
 });
+
+// Load Google rating from reviews table
+async function loadGoogleRating(location = null) {
+
+    const ratingEl = document.getElementById("google-rating");
+    const linkEl = document.getElementById("google-link");
+
+    if (!ratingEl || !linkEl) return;
+
+    let query = supabase
+        .from("reviews")
+        .select("rating");
+
+    if (location) {
+        query = query.eq("location", location);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+        console.error("Error loading Google rating:", error);
+        ratingEl.innerHTML = "Unable to load rating";
+        return;
+    }
+
+    if (!data || data.length === 0) {
+        ratingEl.innerHTML = `
+            <span class="rating-stars">☆☆☆☆☆</span><br>
+            No ratings yet
+        `;
+        return;
+    }
+
+    const average =
+        data.reduce((sum, review) => sum + review.rating, 0) / data.length;
+
+    const rounded = Math.round(average);
+
+    const stars =
+        "★".repeat(rounded) +
+        "☆".repeat(5 - rounded);
+
+    ratingEl.innerHTML = `
+        <span class="rating-stars">${stars}</span><br>
+        ${average.toFixed(1)} / 5
+        (${data.length} reviews)
+    `;
+
+    // Replace with your real Google review page
+    linkEl.href = "https://www.google.com/maps";
+    linkEl.innerText = "View on Google";
+}
