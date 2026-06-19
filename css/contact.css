@@ -81,6 +81,71 @@ textarea {
     background-color: black;
     color: white;
 }
+
+/* Media query for mobile responsive forms */
+@media screen and (max-width: 768px) {
+
+    /* 1. Expand the main container to fit mobile screens nicely */
+    .contact {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    /* 2. Reset text sizes so they are perfectly legible */
+    h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    label {
+        display: block; /* Forces the label to sit ABOVE the input field */
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+        margin-top: 1rem;
+    }
+
+    /* 3. Make all input fields stack cleanly and span full width */
+    input[type=text],
+    input[type=password],
+    input[type=number],
+    input[type=email],
+    textarea {
+        display: block;
+        width: 100%;       /* Full width of the form container */
+        box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+        font-size: 1rem;   /* Prevents iOS auto-zoom bug (16px minimum) */
+        padding: 0.6rem;   /* Makes fields easy to tap */
+        border-radius: 4px;
+    }
+
+    /* 4. STRIP OUT the desktop horizontal alignment margins */
+    #name02, #surname02, #email02, #number02 {
+        margin-left: 0 !important;
+    }
+
+    /* 5. Adjust icons and textarea sizes */
+    textarea {
+        height: 15vh; /* Keep it compact on mobile heights */
+    }
+
+    #contact-form i {
+        font-size: 1rem;
+        margin-left: 0;
+        display: inline-block;
+        margin-top: 0.5rem;
+    }
+
+    /* 6. Transform the button to be easily clickable by thumbs */
+    .contact button {
+        display: block;
+        width: 100%;       /* Full width button or a large chunk of it */
+        height: 3rem;      /* Comfortable mobile tap target height */
+        font-size: 1.1rem;
+        margin-left: 0;    /* Remove desktop offsets */
+        margin-top: 1.5rem;
+        padding: 0;
+    }
+}
 /*
     REFERENCE LIST
 

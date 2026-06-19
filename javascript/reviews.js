@@ -1,5 +1,11 @@
+/**
+ * Import Supabase client library via jsDelivr CDN as an ES module.
+ * @see (jsDelivr, n.d.) for open-source library CDN delivery.
+ * @see (Supabase, n.d.) for client module loading specifications.
+ */
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
+// Initialize Supabase client using project credentials
 const supabase = createClient(
     "https://elftleczqcpxhihmuwlo.supabase.co",
     "sb_publishable_y2XUksG29JZt9192S7WPWg_ON1H73lY"
@@ -7,6 +13,10 @@ const supabase = createClient(
 
 console.log("reviews.js loaded");
 
+/**
+ * Attaches initialization logic to the DOM content lifecycle hook.
+ * @see (Mozilla Developer Network [MDN], n.d.-b) for DOM lifecycle event handling.
+ */
 document.addEventListener("DOMContentLoaded", async () => {
     console.log("DOM ready");
 
@@ -19,13 +29,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     form.addEventListener("submit", submitReview);
 
+    // Asynchronous sequence to populate and render the user interface
+    // @see (Mozilla Developer Network [MDN], n.d.-a) for async/await execution control flow.
     await loadLocations();
     await loadReviews();
     await loadGoogleRating();
 });
 
 
-// Load locations
+/**
+ * Fetches dynamic facility branches to generate drop-down configuration choices.
+ * @async
+ * @see (Supabase, n.d.) for building database connection queries.
+ * @see (Mozilla Developer Network [MDN], n.d.-b) for document tree node insertion.
+ */
 async function loadLocations() {
     const { data, error } = await supabase
         .from("location")
@@ -43,8 +60,11 @@ async function loadLocations() {
         return;
     }
 
+    // Reset layout selection mapping safely using innerHTML
     dropdown.innerHTML = `<option value="">Select Location</option>`;
 
+    // Dynamically generate and append Option objects
+    // @see (W3Schools, n.d.) for interacting with standard Select elements.
     data.forEach(loc => {
         const option = document.createElement("option");
         option.value = loc.name;
@@ -53,8 +73,13 @@ async function loadLocations() {
     });
 }
 
-
-// Submit review (matches YOUR table)
+/**
+ * Intercepts form dispatch routines to evaluate inputs and write entries to Supabase.
+ * @async
+ * @param {Event} e - Event target argument context.
+ * @see (W3Schools, n.d.) for preventative event control architectures.
+ * @see (Supabase, n.d.) for performing .insert() commands via client API.
+ */
 async function submitReview(e) {
     e.preventDefault();
 
@@ -78,6 +103,7 @@ async function submitReview(e) {
         return;
     }
 
+    // Direct structural insertion mapping to Supabase cloud table schema
     const { error } = await supabase
         .from("reviews")
         .insert([
@@ -96,13 +122,18 @@ async function submitReview(e) {
         return;
     }
 
+    // Reset interface entry blocks and trigger asynchronous context syncs
     document.getElementById("review-form").reset();
     loadReviews(location);
     loadGoogleRating(location);
 }
 
-
-// Load reviews
+/**
+ * Fetches reviews and outputs component styling cards to the container.
+ * @async
+ * @param {string|null} [locationFilter=null] - Targeting parameter logic.
+ * @see (Duckett, 2011) for implementing modular layouts and string parsing.
+ */
 async function loadReviews(locationFilter = null) {
     const container = document.getElementById("reviewsList");
 
@@ -151,7 +182,10 @@ async function loadReviews(locationFilter = null) {
     });
 }
 
-// Filter reviews when location changes
+/**
+ * Monitors runtime changes to drop-down selection systems.
+ * @see (Mozilla Developer Network [MDN], n.d.-b) for global state listener assignments.
+ */
 document.addEventListener("change", (e) => {
     if (e.target.id === "review-location") {
         loadReviews(e.target.value);
@@ -159,7 +193,12 @@ document.addEventListener("change", (e) => {
     }
 });
 
-// Load Google rating from reviews table
+/**
+ * Pulls rating arrays to evaluate statistics and render aggregate values.
+ * @async
+ * @param {string|null} [location=null] - Geographic matching argument filter.
+ * @see (Mozilla Developer Network [MDN], n.d.-c) for data reductions and numeric arrays.
+ */
 async function loadGoogleRating(location = null) {
 
     const ratingEl = document.getElementById("google-rating");
@@ -191,11 +230,10 @@ async function loadGoogleRating(location = null) {
         return;
     }
 
+    // Mathematical array reductions to extract summary tracking averages
     const average =
         data.reduce((sum, review) => sum + review.rating, 0) / data.length;
-
     const rounded = Math.round(average);
-
     const stars =
         "★".repeat(rounded) +
         "☆".repeat(5 - rounded);
@@ -210,3 +248,27 @@ async function loadGoogleRating(location = null) {
     linkEl.href = "https://www.google.com/maps";
     linkEl.innerText = "View on Google";
 }
+
+/**
+ * REFERENCE LIST
+ *
+ * Duckett, J., 2011. HTML and CSS: Design and Build Websites. Indianapolis: John Wiley & Sons.
+ *
+ * jsDelivr, n.d. jsDelivr CDN for open source libraries. [online] Available at: https://www.jsdelivr.com/
+ * [Accessed 3 April 2026].
+ *
+ * Mozilla Developer Network (MDN), n.d.-a. Using Fetch and asynchronous JavaScript (Promises and async/await). [online] Available at: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous
+ * [Accessed 3 April 2026].
+ *
+ * Mozilla Developer Network (MDN), n.d.-b. Document Object Model (DOM). [online] Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+ * [Accessed 3 April 2026].
+ *
+ * Mozilla Developer Network (MDN), n.d.-c. JavaScript standard built-in objects: Array.prototype.reduce(). [online] Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+ * [Accessed 19 June 2026].
+ *
+ * Supabase, n.d. Supabase JavaScript Client Documentation. [online] Available at: https://supabase.com/docs/reference/javascript
+ * [Accessed 3 April 2026].
+ *
+ * W3Schools, n.d. JavaScript Tutorial. [online] Available at: https://www.w3schools.com/js/
+ * [Accessed 3 April 2026].
+ */

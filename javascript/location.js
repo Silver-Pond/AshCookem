@@ -1,21 +1,39 @@
+/**
+ * Import Supabase client library via jsDelivr CDN as an ES module.
+ * @see (jsDelivr, n.d.) for open-source library CDN delivery.
+ * @see (Supabase, n.d.) for JavaScript client initialization specifications.
+ */
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
+// Initialize Supabase client using project credentials
 const supabase = createClient(
     "https://elftleczqcpxhihmuwlo.supabase.co",
     "sb_publishable_y2XUksG29JZt9192S7WPWg_ON1H73lY"
 );
 
+/**
+ * Asynchronously fetches location records from Supabase and populates a dynamic layout table.
+ * @async
+ * @see (Mozilla Developer Network [MDN], n.d.-b) for asynchronous JavaScript architectures (async/await).
+ * @see (Supabase, n.d.) for constructing data query chains.
+ * @see (Duckett, 2011) for structuring logical HTML tables dynamically.
+ */
 async function loadLocations() {
+    // Executing database call asynchronously
     const { data, error } = await supabase
         .from("location")
         .select("*");
 
+    // Basic error handling mechanism
     if (error) {
         console.error("Error loading locations:", error);
         return;
     }
 
-    // Group locations by province
+    /**
+     * Grouping the locations data array by province key.
+     * @see (W3Schools, n.d.) or (MDN, n.d.-a) for Array manipulation methods and Object properties.
+     */
     const grouped = {};
 
     data.forEach(item => {
@@ -27,6 +45,10 @@ async function loadLocations() {
 
     const provinces = Object.keys(grouped);
 
+    /**
+     * Querying and modifying structural DOM elements.
+     * @see (Mozilla Developer Network [MDN], n.d.-c) for interacting with the Document Object Model (DOM).
+     */
     const theadRow = document.getElementById("location-head");
     const tbody = document.getElementById("location-body");
 
@@ -57,6 +79,10 @@ async function loadLocations() {
     tbody.innerHTML = rows;
 }
 
+/**
+ * Ensures script fires exclusively after the initial HTML document structure maps entirely.
+ * @see (Mozilla Developer Network [MDN], n.d.-c) for DOM lifecycle event patterns.
+ */
 document.addEventListener("DOMContentLoaded", loadLocations);
 /**
  * REFERENCE LIST

@@ -240,6 +240,51 @@
 .table-h img:hover {
     box-shadow: 0 0.781vw 1.563vw rgba(0,0,0,1);
 }
+
+/* Media query targeting smartphones and small devices */
+@media screen and (max-width: 768px) {
+
+    /* 1. Make tables stack or take up full width instead of squeezing */
+    .table-a, .table-b, .table-c, .table-d,
+    .table-e, .table-f, .table-g, .table-h, .table-team {
+        width: 95%; /* Give it more room on small screens */
+        margin-top: 2rem; /* Use a fixed, predictable spacing */
+    }
+
+    /* 2. Break table cells into a single column so content stacks vertically */
+    .table-a td, .table-b td, .table-c td, .table-d td,
+    .table-e td, .table-f td, .table-g td, .table-h td {
+        display: block;
+        width: 100%;
+        text-align: center; /* Center aligning usually looks cleaner on mobile */
+        font-size: 1rem; /* Reset to readable, accessible text sizes (16px) */
+        letter-spacing: 0.5px;
+    }
+
+    .table-a span, .table-d span, .table-e span,
+    .table-f span, .table-g span, .table-h span {
+        font-size: 1.1rem; /* Slightly larger emphasis text */
+    }
+
+    /* 3. Adjust team tables */
+    .table-team td {
+        display: block;
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .table-team span {
+        font-size: 1.05rem;
+    }
+
+    /* 4. Disable or tone down desktop-only hover tracking states */
+    .table-a img, .table-b img, .table-c img, .table-d img,
+    .table-e img, .table-f img, .table-g img, .table-h img {
+        transform: none !important; /* Removes 3D tilt on mobile */
+        max-width: 100%;
+        height: auto;
+    }
+}
 /*
     REFERENCE LIST
 

@@ -223,6 +223,87 @@ input[type=text], input[type=password], input[type=number], input[type=email] {
     color: gold;
     font-size: 2.104vw;
 }
+
+/* Media query targeting mobile viewports (smartphones and small tablets) */
+@media screen and (max-width: 768px) {
+
+    /* 1. Make content blocks adapt to the width of smaller screens */
+    .location-table table,
+    .time-table table,
+    .reviews-section,
+    .external-ratings {
+        width: 92% !important; /* Allow tables and sections to maximize mobile screen space */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* 2. Fix typography scales across titles, headers, and text cards */
+    h2 {
+        font-size: 1.8rem !important;
+        text-align: center;
+    }
+
+    .location-table thead, .location-table tbody,
+    .time-table thead, .time-table tbody {
+        font-size: 0.95rem !important; /* Forces clear, legible text dimensions */
+    }
+
+    .review-form label {
+        font-size: 1rem !important;
+    }
+
+    .external-ratings h3 {
+        font-size: 1.25rem !important;
+    }
+
+    .external-ratings p {
+        font-size: 1rem !important;
+    }
+
+    .external-ratings a {
+        font-size: 0.95rem !important;
+        display: inline-block;
+        padding: 0.5rem 0;
+    }
+
+    /* 3. Convert fields to span wider and prevent the iOS auto-zoom input bug */
+    input[type=text],
+    input[type=password],
+    input[type=number],
+    input[type=email],
+    .review-form select,
+    .review-form textarea {
+        width: 90% !important;   /* Expanding width so fields are easy to tap and type into */
+        height: auto !important; /* Strips out the microscopic vw heights */
+        font-size: 1rem !important; /* Keeps font at 16px minimum to bypass forced mobile zooming */
+        padding: 0.6rem !important;
+        box-sizing: border-box;
+    }
+
+    /* 4. Optimize form submission button into a comfortable thumb target */
+    .review-form button {
+        width: 90% !important;   /* Stretch button for easier touch interaction */
+        height: 3rem !important; /* Standard finger-friendly touch height */
+        font-size: 1.1rem !important;
+        margin-top: 2vh !important;
+        padding: 0 !important;
+    }
+
+    /* 5. Clean up display sizes on dynamic review cards */
+    .review-card, .rating-card {
+        width: 90% !important;
+        font-size: 1rem !important;
+        padding: 1rem !important;
+    }
+
+    .review-card p, .rating-card p {
+        font-size: 0.95rem !important;
+    }
+
+    .review-stars, .rating-stars {
+        font-size: 1.5rem !important; /* Prevents star icons from rendering excessively large or small */
+    }
+}
 /*
     REFERENCE LIST
 

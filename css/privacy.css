@@ -41,6 +41,40 @@ h5 {
     color: black;
     font-size: 1.01vw;
 }
+
+/* Media query targeting mobile viewports (smartphones and tablets) */
+@media screen and (max-width: 768px) {
+
+    /* 1. Reset heading text dimensions back to readable sizes */
+    .header-container h2 {
+        font-size: 1.75rem !important; /* Bold, highly-visible primary title */
+        -webkit-text-stroke-width: 1px !important; /* Enforces a sharp, visible outline on mobile */
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 1.2rem !important; /* Subheadings remain legible and properly weighted */
+        margin-left: 1rem !important;  /* Replaces small vw spacing with fixed padding */
+    }
+
+    h5 {
+        font-size: 1rem !important;
+        margin-left: 1rem !important;
+    }
+
+    /* 2. Expand structural containers smoothly across small display bounds */
+    .sub-container,
+    .info-container {
+        width: 100% !important; /* Allows sections to sit flush within global wrapper bounds */
+        padding: 0 1rem;       /* Safe padding buffer from screen glass edges */
+        margin-left: 0 !important;
+    }
+
+    /* 3. Ensure details and iconography indicators scale adequately for touch interface views */
+    .info-container i {
+        font-size: 1.1rem !important; /* Scale icons up to match text visual weights cleanly */
+    }
+}
 /*
     REFERENCE LIST
 

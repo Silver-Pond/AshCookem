@@ -1,17 +1,22 @@
+// Importing the Supabase JavaScript client library from jsDelivr CDN
+// to enable communication with the Supabase backend (Supabase, n.d.; jsDelivr, n.d.).
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
+// Creating a connection to the Supabase database using the project URL
+// and public API key (Supabase, n.d.).
 const supabase = createClient(
     "https://elftleczqcpxhihmuwlo.supabase.co",
     "sb_publishable_y2XUksG29JZt9192S7WPWg_ON1H73lY"
 );
 
-// Reusable function to load any category
+// Reusable function to load any category (MDN, n.d.).
 async function loadCategory(type, tbodyId) {
     const { data, error } = await supabase
         .from("menu_item")
         .select("*")
         .eq("type", type);
 
+    // Display an error message in the console if the query fails (MDN, n.d.).
     if (error) {
         console.error(`Error loading ${type}:`, error);
         return;
@@ -26,6 +31,9 @@ async function loadCategory(type, tbodyId) {
         return;
     }
 
+    // Using the map() method to generate HTML rows dynamically and join()
+    // them into a single string before inserting them into the page
+    // (Duckett, 2014; W3Schools, n.d.).
     tbody.innerHTML = data.map(item => `
     <tr>
       <td>
@@ -39,7 +47,7 @@ async function loadCategory(type, tbodyId) {
   `).join("");
 }
 
-// Load ALL menu sections
+// Load ALL menu sections (Duckett, 2014).
 function loadMenu() {
     loadCategory("starter", "starters-body");
     loadCategory("entrée", "entrées-body");
@@ -49,6 +57,7 @@ function loadMenu() {
     loadCategory("non-alcoholic beverage", "non-alcoholic-body");
 }
 
+// Function that controls the category filter (MDN, n.d.).
 function initializeFilter() {
 
     const filter = document.getElementById("category-filter");
@@ -59,6 +68,8 @@ function initializeFilter() {
 
         const selected = filter.value;
 
+        // Iterate through every menu section and determine whether
+        // it should be visible or hidden (W3Schools, n.d.).
         sections.forEach(section => {
 
             if (selected === "all") {
@@ -82,6 +93,9 @@ function initializeFilter() {
 
 }
 
+// The DOMContentLoaded event ensures that the HTML document is fully loaded
+// before attempting to manipulate page elements or fetch menu data
+// (MDN, n.d.).
 document.addEventListener("DOMContentLoaded", () => {
     loadMenu();
     initializeFilter();

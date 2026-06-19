@@ -1,13 +1,31 @@
+/**
+ * Opens the reservation modal by setting its CSS display property to 'flex'.
+ * This UI manipulation relies on standard DOM manipulation techniques.
+ * * @see (Mozilla Developer Network [MDN], n.d.-b) for DOM property manipulation.
+ * @see (W3Schools, n.d.) for basic JavaScript style changes.
+ */
 function reservation() {
+    // Accesses the DOM element and modifies its layout style to make it visible
     document.getElementById("reservationOverlay").style.display = "flex";
 }
 
+/**
+ * Closes the reservation modal by hiding it from the view.
+ * * @see (Mozilla Developer Network [MDN], n.d.-b) for Element selection and styling.
+ */
 function closeReservation() {
+    // Hides the overlay by setting display to 'none'
     document.getElementById("reservationOverlay").style.display = "none";
 }
 
-// Optional: close when clicking outside the form
+/**
+ * Global event listener to handle modal closure when clicking outside the form.
+ * Utilizes the window.onclick event handler and event targeting.
+ * * @see (Mozilla Developer Network [MDN], n.d.-a) for fundamental JavaScript event handling.
+ * @see (Duckett, 2011) for implementing interactive overlays and modal logic.
+ */
 window.onclick = function (event) {
+    // Checks if the actual clicked element (event.target) is the overlay background itself
     const overlay = document.getElementById("reservationOverlay");
     if (event.target === overlay) {
         overlay.style.display = "none";

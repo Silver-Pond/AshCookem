@@ -64,6 +64,52 @@ small {
 .hidden-section {
     display: none;
 }
+
+/* Media query targeting smartphones and mobile viewports */
+@media screen and (max-width: 768px) {
+
+    /* 1. Expand the table width to prevent text squishing */
+    table {
+        width: 92% !important; /* Allow the menu table to utilize screen width on smaller glass */
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* 2. Fix fonts across headers, details, and labels */
+    th {
+        font-size: 1.5rem !important; /* Keeps category headers bold and readable */
+        padding-bottom: 0.5rem;
+    }
+
+    td {
+        font-size: 1rem !important; /* Converts microscopic layout sizes back to a highly legible 16px root */
+        padding: 0.6rem 0.4rem !important;
+    }
+
+    /* 3. Handle potential overflow and pricing layout adjustments safely */
+    td:last-child {
+        white-space: normal !important; /* Safely wraps prices if layout constraints squeeze tightly */
+        text-align: right;              /* Right-aligns prices nicely against standard menu lines */
+    }
+
+    /* 4. Transform filter layout panels for easy touch navigation */
+    .menu-filter {
+        flex-direction: column; /* Stack label and drop-down menu on top of one another */
+        gap: 0.5rem !important;
+        margin-bottom: 1.5rem !important;
+        width: 100%;
+    }
+
+    .menu-filter label {
+        font-size: 1.1rem !important;
+    }
+
+    .menu-filter select {
+        width: 80% !important;     /* Give users a wide, touch-friendly tap area */
+        padding: 0.75rem !important; /* Creates a comfortable thumb target bounding box */
+        font-size: 1rem !important;  /* Bypasses the default iOS Safari input zoom-in bug */
+        border-width: 2px !important;
+    }
+}
 /*
     REFERENCE LIST
 
