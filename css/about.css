@@ -172,6 +172,38 @@
     border-radius: 0.26vw;
 }
 
+.table-team {
+    width: 80%;
+    margin: 6.25vw auto 0;
+}
+
+.table-team table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table-team td {
+    width: 40%;
+    text-align: center;
+    vertical-align: top;
+    padding: 1rem;
+    font-size: 1.563vw;
+    letter-spacing: 0.078vw;
+}
+
+.table-team span {
+    font-size: 1.563vw;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.table-team img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 0.26vw;
+}
+
 .table-a img,
 .table-b img,
 .table-c img,

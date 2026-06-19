@@ -107,6 +107,9 @@
                 <input type="hidden" name="subject" value="New Contact Form Submission">
                 <input type="hidden" name="form_name" value="Ash n Elly's Contact Form">
 
+                <!-- Honeypot -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
                 <label for="name"><b>NAME:</b></label>
                 <input type="text" id="name02" placeholder="Enter Name" name="name" required>
                 <div class="resizable-break"></div>
@@ -130,6 +133,9 @@
                 <textarea name="message" placeholder="Insert message here..." required></textarea>
                 <div class="resizable-break"></div>
                 <div class="resizable-break"></div>
+
+                <!-- Enable Captcha -->
+                <div class="h-captcha" data-captcha="true"></div>
 
                 <button type="submit">Submit</button>
                 <div class="resizable-break"></div>
