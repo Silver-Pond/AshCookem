@@ -62,9 +62,124 @@
     border-radius: 0.26vw;
 }
 
+.table-d {
+    width: 80%;
+    margin-top: 6.25vw;
+}
+
+.table-d td {
+    width: 50%;
+    text-align: left;
+    font-size: 1.563vw;
+    letter-spacing: 0.078vw;
+}
+
+.table-d span {
+    font-size: 1.563vw;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.table-d img {
+    border-radius: 0.26vw;
+}
+
+.table-e {
+    width: 80%;
+    margin-top: 6.25vw;
+}
+
+.table-e td {
+    width: 50%;
+    text-align: left;
+    font-size: 1.563vw;
+    letter-spacing: 0.078vw;
+}
+
+.table-e span {
+    font-size: 1.563vw;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.table-e img {
+    border-radius: 0.26vw;
+}
+
+.table-f {
+    width: 80%;
+    margin-top: 6.25vw;
+}
+
+.table-f td {
+    width: 50%;
+    text-align: left;
+    font-size: 1.563vw;
+    letter-spacing: 0.078vw;
+}
+
+.table-f span {
+    font-size: 1.563vw;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.table-f img {
+    border-radius: 0.26vw;
+}
+
+.table-g {
+    width: 80%;
+    margin-top: 6.25vw;
+}
+
+.table-g td {
+    width: 50%;
+    text-align: left;
+    font-size: 1.563vw;
+    letter-spacing: 0.078vw;
+}
+
+.table-g span {
+    font-size: 1.563vw;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.table-g img {
+    border-radius: 0.26vw;
+}
+
+.table-h {
+    width: 80%;
+    margin-top: 6.25vw;
+}
+
+.table-h td {
+    width: 50%;
+    text-align: left;
+    font-size: 1.563vw;
+    letter-spacing: 0.078vw;
+}
+
+.table-h span {
+    font-size: 1.563vw;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.table-h img {
+    border-radius: 0.26vw;
+}
+
 .table-a img,
 .table-b img,
-.table-c img {
+.table-c img,
+.table-d img,
+.table-e img,
+.table-f img,
+.table-g img,
+.table-h img {
     border-radius: 0.26vw;
 
     --rotateX: 0deg;
@@ -83,7 +198,12 @@
 
 .table-a img:hover,
 .table-b img:hover,
-.table-c img:hover {
+.table-c img:hover,
+.table-d img:hover,
+.table-e img:hover,
+.table-f img:hover,
+.table-g img:hover,
+.table-h img:hover {
     box-shadow: 0 0.781vw 1.563vw rgba(0,0,0,1);
 }
 /*

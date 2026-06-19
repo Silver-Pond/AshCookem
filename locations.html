@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>A&K-Restaurant Locations</title>
+    <title>A&E-Restaurant Locations</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/locations.css">
 </head>
@@ -134,6 +134,49 @@
         </div>
         <div class="resizable-break"></div>
         <div class="resizable-break"></div>
+
+        <!-- Ratings & Reviews Section -->
+        <div class="reviews-section">
+
+            <h2>Customer Ratings & Reviews</h2>
+
+            <!-- Review Form -->
+            <form id="review-form" class="review-form">
+
+                <!-- Customer Name -->
+                <label for="customer_name"><b>NAME:</b></label>
+                <input type="text" id="customer_name" name="customer_name" placeholder="Enter Your Name" required>
+
+                <!-- Location (required for DB) -->
+                <label for="location"><b>LOCATION:</b></label>
+                <select id="review-location" name="location" required>
+                    <option value="">Select Location</option>
+                </select>
+
+                <!-- Rating -->
+                <label for="rating"><b>RATE YOUR EXPERIENCE:</b></label>
+                <select id="rating" name="rating" required>
+                    <option value="5">★★★★★ - Excellent</option>
+                    <option value="4">★★★★ - Very Good</option>
+                    <option value="3">★★★ - Good</option>
+                    <option value="2">★★ - Fair</option>
+                    <option value="1">★ - Poor</option>
+                </select>
+
+                <!-- Review Text -->
+                <label for="review_text"><b>WRITE A REVIEW:</b></label>
+                <textarea id="review_text" name="review_text" placeholder="Share your experience..." rows="4" required></textarea>
+
+                <button type="submit">Review</button>
+            </form>
+
+            <hr>
+
+            <!-- Display Reviews -->
+            <div id="reviewsList"></div>
+        </div>
+        <div class="resizable-break"></div>
+        <div class="resizable-break"></div>
     </div>
 
     <div class="footer">
@@ -166,6 +209,7 @@
     </div>
 </div>
 <script type="module" src="javascript/location.js"></script>
+<script type="module" src="javascript/reviews.js"></script>
 <script type="module" src="javascript/reservation_booking.js"></script>
 </body>
 <script src="javascript/slideshow.js"></script>
@@ -174,23 +218,23 @@
 <!--
     REFERENCE LIST
 
-    Canva, n.d. Graphic design platform (images, icons and visual assets used in website design). [online] Available at: https://www.canva.com/
+    Canva, n.d. Graphic design platform (images, icons and visual assets used in website design). [online]. Available at: https://www.canva.com/
     [Accessed 3 April 2026].
 
     Duckett, J., 2011. HTML and CSS: Design and Build Websites. Indianapolis: John Wiley & Sons.
 
-    Mozilla Developer Network (MDN), n.d. HTML: HyperText Markup Language. [online] Available at: https://developer.mozilla.org/en-US/docs/Web/HTML
+    Mozilla Developer Network (MDN), n.d. HTML: HyperText Markup Language. [online]. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML
     [Accessed 3 April 2026].
 
-    Mozilla Developer Network (MDN), n.d. HTML forms guide. [online] Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms
+    Mozilla Developer Network (MDN), n.d. HTML forms guide. [online]. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms
     [Accessed 3 April 2026].
 
-    Mozilla Developer Network (MDN), n.d. JavaScript basics. [online] Available at: https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+    Mozilla Developer Network (MDN), n.d. JavaScript basics. [online]. Available at: https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
     [Accessed 3 April 2026].
 
-    W3Schools, n.d. HTML Tutorial. [online] Available at: https://www.w3schools.com/html/
+    W3Schools, n.d. HTML Tutorial. [online]. Available at: https://www.w3schools.com/html/
     [Accessed 3 April 2026].
 
-    W3Schools, n.d. JavaScript Tutorial. [online] Available at: https://www.w3schools.com/js/
+    W3Schools, n.d. JavaScript Tutorial. [online]. Available at: https://www.w3schools.com/js/
     [Accessed 3 April 2026].
 -->

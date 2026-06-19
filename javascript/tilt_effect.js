@@ -29,7 +29,12 @@ window.addEventListener("DOMContentLoaded", () => {
         ".items-link, " +
         ".table-a img, " +
         ".table-b img, " +
-        ".table-c img"
+        ".table-c img, " +
+        ".table-d img, " +
+        ".table-e img, " +
+        ".table-f img, " +
+        ".table-g img, " +
+        ".table-h img"
     );
 
     // Loop through each selected element.
@@ -144,42 +149,42 @@ window.addEventListener("DOMContentLoaded", () => {
 * REFERENCE LIST
 *
 * MDN Web Docs, 2025. Element: mousemove event.
-* Available at: https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event
+* [online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event
 * [Accessed: 04 June 2026].
 *
 * MDN Web Docs, 2025. Element: mouseleave event.
-* Available at: https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseleave_event
+* [online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseleave_event
 * [Accessed: 04 June 2026].
 *
 * MDN Web Docs, 2025. Window: requestAnimationFrame() method.
-* Available at: https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+* [online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
 * [Accessed: 04 June 2026].
 *
 * MDN Web Docs, 2025. Element.getBoundingClientRect().
-* Available at: https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
+* [online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
 * [Accessed: 04 June 2026].
 *
 * MDN Web Docs, 2025. Using CSS transforms.
-* Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms
+* [online]. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms
 * [Accessed: 04 June 2026].
 *
 * MDN Web Docs, 2025. transform-style.
-* Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style
+* [online]. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style
 * [Accessed: 04 June 2026].
 *
 * MDN Web Docs, 2025. perspective.
-* Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/perspective
+* [online]. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/perspective
 * [Accessed: 04 June 2026].
 *
 * Mozilla Foundation, 2025. Document Object Model (DOM).
-* Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+* [online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
 * [Accessed: 04 June 2026].
 *
 * W3Schools, 2025. JavaScript HTML DOM EventListener.
-* Available at: https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+* [online]. Available at: https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 * [Accessed: 04 June 2026].
 *
 * W3Schools, 2025. CSS 3D Transforms.
-* Available at: https://www.w3schools.com/css/css3_3dtransforms.asp
+* [online]. Available at: https://www.w3schools.com/css/css3_3dtransforms.asp
 * [Accessed: 04 June 2026].
 * */

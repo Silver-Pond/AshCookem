@@ -82,6 +82,16 @@ body{
     height: auto;
 }
 
+#potjie {
+    width: 31.25vw;
+    height: auto;
+}
+
+#braai {
+    width: 31.25vw;
+    height: auto;
+}
+
 #menu-img {
     width: 31.25vw;
     height: auto;
@@ -158,6 +168,26 @@ body{
     border-radius: 0.26vw;
     background-color: black;
 }
+
+.events {
+    width: 98%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+}
+
+.events ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.events ul li {
+    float: left;
+}
+
 
 .reservation {
     position: fixed;
@@ -265,7 +295,6 @@ body{
 }
 
 /* 3D hover effect */
-.our-story,
 .items-link {
     transform-style: preserve-3d;
     perspective: 1000px;
@@ -281,7 +310,6 @@ body{
     will-change: transform;
 }
 
-.our-story:hover,
 .items-link:hover {
     box-shadow: 0 1.042vw 2.083vw rgba(0,0,0,1);
 }

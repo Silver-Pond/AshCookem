@@ -28,18 +28,18 @@ setInterval(changeImage, 3000);
 * REFERENCE LIST
 *
 * Mozilla Developer Network (MDN), 2025. Document: DOMContentLoaded event.
-* Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
+* [online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
 * [Accessed: 03 June 2026].
 *
 * Mozilla Developer Network (MDN), 2025. Window: setInterval() method.
-* Available at: https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval
+* [online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval
 * [Accessed: 03 June 2026].
 *
 * Mozilla Developer Network (MDN), 2025. Document.getElementById() method.
-* Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+* [online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
 * [Accessed: 03 June 2026].
 *
 * OpenAI, 2026. ChatGPT (GPT-5.5) generated JavaScript slideshow example.
-* Available at: https://chatgpt.com
+* [online]. Available at: https://chatgpt.com
 * [Accessed: 03 June 2026].
 * */
