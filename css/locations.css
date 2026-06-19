@@ -74,6 +74,38 @@
     text-align: center;
 }
 
+.contact-table table {
+    width: 60%;
+    background-color: #143226;
+    border: 0.26vw solid #143226;
+    border-radius: 0.521vw;
+    margin-bottom: 1.042vw;
+    justify-self: center;
+}
+
+.contact-table thead {
+    background-color: #143226;
+    color: white;
+    padding: 1.042vw;
+    font-style: italic;
+    font-size: 1.302vw;
+}
+
+.contact-table tbody {
+    background-color: #dfddc9;
+    padding: 0.521vw;
+    vertical-align: top;
+    font-size: 1.302vw;
+}
+
+.contact-table td {
+    border: 0.104vw solid #143226;
+    border-bottom-left-radius: 0.521vw;
+    border-bottom-right-radius: 0.521vw;
+    padding: 0.521vw;
+    text-align: center;
+}
+
 h2 {
     background-image: linear-gradient(#143226, #dfddc9, black);
     color: transparent;
