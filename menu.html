@@ -97,7 +97,7 @@
     <div class="resizable-break"></div>
     <div class="resizable-break"></div>
 
-    <div class="starters">
+    <div class="menu-logo">
       <table>
         <thead>
         <tr>
@@ -105,6 +105,40 @@
             <img src="img/menu-top.png" width="80%" height=auto alt="Ash & Elly's Logo"/>
           </th>
         </tr>
+        </thead>
+        <tbody id="logo-body"></tbody>
+      </table>
+    </div>
+    <div class="resizable-break"></div>
+
+    <div class="menu-filter">
+      <label for="category-filter">Filter Menu:</label>
+
+      <select id="category-filter">
+        <option value="all">All Categories</option>
+        <option value="starters">Starters</option>
+        <option value="entrées">Entrées</option>
+        <option value="sides">Sides</option>
+        <option value="desserts">Desserts</option>
+        <option value="alcoholic-beverages">Alcoholic Beverages</option>
+        <option value="non-alcoholic-beverages">Non-Alcoholic Beverages</option>
+      </select>
+    </div>
+
+    <div class="blank">
+      <table>
+        <thead>
+        <tr>
+          <th colspan="2"></th>
+        </tr>
+        </thead>
+        <tbody id="blank-body"></tbody>
+      </table>
+    </div>
+
+    <div class="menu-section starters">
+      <table>
+        <thead>
         <tr>
           <th colspan="2">STARTERS</th>
         </tr>
@@ -112,9 +146,8 @@
         <tbody id="starters-body"></tbody>
       </table>
     </div>
-    <div class="resizable-break"></div>
 
-    <div class="entrées">
+    <div class="menu-section entrées">
       <table>
         <thead>
         <tr>
@@ -124,9 +157,8 @@
         <tbody id="entrées-body"></tbody>
       </table>
     </div>
-    <div class="resizable-break"></div>
 
-    <div class="sides">
+    <div class="menu-section sides">
       <table>
         <thead>
         <tr><th colspan="2">SIDES</th></tr>
@@ -134,9 +166,8 @@
         <tbody id="sides-body"></tbody>
       </table>
     </div>
-    <div class="resizable-break"></div>
 
-    <div class="desserts">
+    <div class="menu-section desserts">
       <table>
         <thead>
         <tr><th colspan="2">DESSERTS</th></tr>
@@ -144,9 +175,8 @@
         <tbody id="desserts-body"></tbody>
       </table>
     </div>
-    <div class="resizable-break"></div>
 
-    <div class="alcoholic-beverages">
+    <div class="menu-section alcoholic-beverages">
       <table>
         <thead>
         <tr><th colspan="2">ALCOHOLIC BEVERAGES</th></tr>
@@ -154,9 +184,8 @@
         <tbody id="alcoholic-body"></tbody>
       </table>
     </div>
-    <div class="resizable-break"></div>
 
-    <div class="non-alcoholic-beverages">
+    <div class="menu-section non-alcoholic-beverages">
       <table>
         <thead>
         <tr><th colspan="2">NON-ALCOHOLIC BEVERAGES</th></tr>

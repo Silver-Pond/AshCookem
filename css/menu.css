@@ -32,6 +32,38 @@ th {
 small {
     color: #555;
 }
+
+.menu-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    margin-bottom: 2vw;
+}
+
+.menu-filter label {
+    font-size: 1.2vw;
+    color: #143226;
+    font-weight: bold;
+}
+
+.menu-filter select {
+    padding: 0.5vw 1vw;
+    font-size: 1vw;
+    border: 0.15vw solid #143226;
+    border-radius: 0.5vw;
+    background-color: white;
+    color: #143226;
+    cursor: pointer;
+}
+
+.menu-section {
+    display: block;
+}
+
+.hidden-section {
+    display: none;
+}
 /*
     REFERENCE LIST
 

@@ -49,7 +49,43 @@ function loadMenu() {
     loadCategory("non-alcoholic beverage", "non-alcoholic-body");
 }
 
-document.addEventListener("DOMContentLoaded", loadMenu);
+function initializeFilter() {
+
+    const filter = document.getElementById("category-filter");
+
+    const sections = document.querySelectorAll(".menu-section");
+
+    filter.addEventListener("change", () => {
+
+        const selected = filter.value;
+
+        sections.forEach(section => {
+
+            if (selected === "all") {
+
+                section.classList.remove("hidden-section");
+
+            } else {
+
+                if (section.classList.contains(selected)) {
+                    section.classList.remove("hidden-section");
+                }
+                else {
+                    section.classList.add("hidden-section");
+                }
+
+            }
+
+        });
+
+    });
+
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadMenu();
+    initializeFilter();
+});
 /**
  * REFERENCE LIST
  *
